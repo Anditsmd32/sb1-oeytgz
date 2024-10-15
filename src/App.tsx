@@ -33,7 +33,7 @@ function App() {
 
   const headerRef = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll();
-  const headerHeight = useTransform(scrollY, [0, 300], [150, 50]);
+  const headerHeight = useTransform(scrollY, [0, 450], [150, 50]);
   const headerOpacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   useEffect(() => {
@@ -149,11 +149,47 @@ function App() {
         </motion.div>
         <nav>
           <ul className="flex space-x-4">
-            <li><button onClick={() => scrollToSection('about')} className="hover:text-yellow-300">About</button></li>
-            <li><button onClick={() => scrollToSection('pokechain')} className="hover:text-yellow-300">Pokechain</button></li>
-            <li><button onClick={() => scrollToSection('pokedex')} className="hover:text-yellow-300">Pokédex</button></li>
-            <li><button onClick={() => scrollToSection('tokenomics')} className="hover:text-yellow-300">Tokenomics</button></li>
-            <li><button onClick={() => scrollToSection('community')} className="hover:text-yellow-300">Community</button></li>
+          <li>
+  <button
+    onClick={() => scrollToSection('about')}
+    className="bg-black text-white hover:text-yellow-300"
+  >
+    About
+  </button>
+</li>
+<li>
+  <button
+    onClick={() => scrollToSection('pokechain')}
+    className="bg-black text-white hover:text-yellow-300"
+  >
+    Pokechain
+  </button>
+</li>
+<li>
+  <button
+    onClick={() => scrollToSection('pokedex')}
+    className="bg-black text-white hover:text-yellow-300"
+  >
+    Pokédex
+  </button>
+</li>
+<li>
+  <button
+    onClick={() => scrollToSection('tokenomics')}
+    className="bg-black text-white hover:text-yellow-300"
+  >
+    Tokenomics
+  </button>
+</li>
+<li>
+  <button
+    onClick={() => scrollToSection('community')}
+    className="bg-black text-white hover:text-yellow-300"
+  >
+    Community
+  </button>
+</li>
+
           </ul>
         </nav>
         <button onClick={() => setDarkMode(!darkMode)} className="p-2 rounded-full bg-opacity-20 backdrop-blur-md">
@@ -165,8 +201,8 @@ function App() {
         </button>
       </header>
 
-      <div className="pt-[220px]">
-        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/il_300x300.6275181720_sjnk-tLQj90c9u3mjiMFDJcywqZ505wGs7L.webp" alt="Pokemon Characters" className="w-full object-cover" />
+      <div className="pt-[160px]">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/il_300x300.6275181720_sjnk-tLQj90c9u3mjiMFDJcywqZ505wGs7L.webp" alt="Pokemon Characters" className="w-full h-96 object-cover" />
       </div>
 
       <main className="container mx-auto px-4 py-24">
@@ -186,7 +222,7 @@ function App() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            The cutest token on <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pulsechain-card.ead95153-tOblpYBeTyIO8ypzGjd1qe2s6T32rJ.png" alt="PulseChain Logo" className="inline mx-1 w-[120px] h-[30px]" />!
+            The cutest token on <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pulsechain-card.ead95153-tOblpYBeTyIO8ypzGjd1qe2s6T32rJ.png" alt="PulseChain Logo" className="inline mx-1 w-[120px] h-[90px]" />!
           </motion.p>
           
           <motion.div
@@ -218,9 +254,9 @@ function App() {
           >
             <div className={`${darkMode ? 'bg-black' : 'bg-white'} p-6 rounded-lg flex items-center`}>
               <div className="flex-1">
-                <h2 className="text-3xl font-bold mb-4">About <img src="https://i.ibb.co/nfYN0YW/teddinenew.png" alt="Teddiursa Icon" className="inline mx-1 w-[90px] h-[90px]" /></h2>
-                <p className="mb-4"><img src="https://i.ibb.co/nfYN0YW/teddinenew.png" alt="Teddiursa Icon" className="inline mx-1 w-[90px] h-[90px]" /> was airdropped for free to the <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[36px]" /> Chain Community on <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pulsechain-card.ead95153-tOblpYBeTyIO8ypzGjd1qe2s6T32rJ.png" alt="PulseChain Logo" className="inline mx-1 w-[120px] h-[30px]" />. It's a cute and fun token that brings joy to its holders!</p>
-                <p>Teddiursa, the Little Bear <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[36px]" />, is known for its adorable appearance and its love for sweet honey. Just like our token, Teddiursa is small but full of potential. It has a crescent moon mark on its forehead, which glows when it finds honey. Similarly, our token aims to sweeten your crypto journey!</p>
+                <h2 className="text-3xl font-bold mb-4">About</h2>
+                <p className="mb-4"><img src="https://i.ibb.co/nfYN0YW/teddinenew.png" alt="Teddiursa Icon" className="inline mx-1 w-[90px] h-[90px]" /> was airdropped for free to the <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[60px]" /> Chain Community on <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pulsechain-card.ead95153-tOblpYBeTyIO8ypzGjd1qe2s6T32rJ.png" alt="PulseChain Logo" className="inline mx-1 w-[120px] h-[60px]" />. It's a cute and fun token that brings joy to its holders!</p>
+                <p>Teddiursa, the Little Bear <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[60px]" />, is known for its adorable appearance and its love for sweet honey. Just like our token, Teddiursa is small but full of potential. It has a crescent moon mark on its forehead, which glows when it finds honey. Similarly, our token aims to sweeten your crypto journey!</p>
               </div>
               <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/teddiursa-400x400-sHct1AhfULZwxz7IauRaOEKUfXQfs7.webp" alt="Teddiursa" className="ml-4 w-[200px] h-[200px]" />
             </div>
@@ -235,16 +271,16 @@ function App() {
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
             <div className={`${darkMode ? 'bg-black' : 'bg-white'} p-6 rounded-lg`}>
-              <h2 className="text-3xl font-bold mb-4">Pokechain: The <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[36px]" /> Trend on <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pulsechain-card.ead95153-tOblpYBeTyIO8ypzGjd1qe2s6T32rJ.png" alt="PulseChain Logo" className="inline mx-1 w-[120px] h-[30px]" /></h2>
-              <p className="mb-4">Pokechain represents the exciting <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[36px]" />-inspired trend taking over <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pulsechain-card.ead95153-tOblpYBeTyIO8ypzGjd1qe2s6T32rJ.png" alt="PulseChain Logo" className="inline mx-1 w-[120px] h-[30px]" />. It's a community-driven movement that brings the nostalgia and fun of <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[36px]" /> into the world of cryptocurrency.</p>
-              <p className="mb-4">As part of this trend, various <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[36px]" />-themed tokens have emerged, each representing different <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[36px]" /> characters and their unique traits. These tokens not only serve as digital assets but also as a way for <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[36px]" /> fans to engage with their favorite characters in the crypto space.</p>
-              <h3 className="text-2xl font-bold mb-2">How <img src="https://i.ibb.co/nfYN0YW/teddinenew.png" alt="Teddiursa Icon" className="inline mx-1 w-[90px] h-[90px]" /> Adds Value to Pokechain</h3>
+              <h2 className="text-3xl font-bold mb-4">Pokechain: The <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[60px]" /> Trend on <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pulsechain-card.ead95153-tOblpYBeTyIO8ypzGjd1qe2s6T32rJ.png" alt="PulseChain Logo" className="inline mx-1 w-[120px] h-[60px]" /></h2>
+              <p className="mb-4">Pokechain represents the exciting <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[60px]" />-inspired trend taking over <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pulsechain-card.ead95153-tOblpYBeTyIO8ypzGjd1qe2s6T32rJ.png" alt="PulseChain Logo" className="inline mx-1 w-[120px] h-[60px]" />. It's a community-driven movement that brings the nostalgia and fun of <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[60px]" /> into the world of cryptocurrency.</p>
+              <p className="mb-4">As part of this trend, various <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[60px]" />-themed tokens have emerged, each representing different <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[60px]" /> characters and their unique traits. These tokens not only serve as digital assets but also as a way for <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[60px]" /> fans to engage with their favorite characters in the crypto space.</p>
+              <h3 className="text-2xl font-bold mb-2">How <img src="https://i.ibb.co/nfYN0YW/teddinenew.png" alt="Teddiursa Icon" className="inline mx-1 w-[60px] h-[60px]" /> Adds Value to Pokechain</h3>
               <ul className="list-disc list-inside">
-                <li>Unique Character Representation: <img src="https://i.ibb.co/nfYN0YW/teddinenew.png" alt="Teddiursa Icon" className="inline mx-1 w-[90px] h-[90px]" /> brings its cute and lovable personality to the Pokechain ecosystem, adding diversity to the <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[36px]" />-inspired tokens.</li>
-                <li>Community Engagement: As a free airdrop to the Pokechain community, <img src="https://i.ibb.co/nfYN0YW/teddinenew.png" alt="Teddiursa Icon" className="inline mx-1 w-[90px] h-[90px]" /> encourages wider participation and helps grow the overall Pokechain movement.</li>
-                <li>Reward Mechanism: With its 3% rewards in Teddy tokens, <img src="https://i.ibb.co/nfYN0YW/teddinenew.png" alt="Teddiursa Icon" className="inline mx-1 w-[90px] h-[90px]" /> introduces an innovative tokenomics model to the Pokechain trend, potentially inspiring other projects.</li>
-                <li>Cross-Token Interactions: The connection between <img src="https://i.ibb.co/nfYN0YW/teddinenew.png" alt="Teddiursa Icon" className="inline mx-1 w-[90px] h-[90px]" /> and Teddy tokens showcases the potential for interesting token interactions within the Pokechain ecosystem.</li>
-                <li>Community-Driven Liquidity: For the token to thrive and grow, the community will need to add their own liquidity to the trading pools. This active participation ensures a healthy and sustainable ecosystem for <img src="https://i.ibb.co/nfYN0YW/teddinenew.png" alt="Teddiursa Icon" className="inline mx-1 w-[90px] h-[90px]" />. Users should also keep a healthy bag of <img src="https://i.ibb.co/nfYN0YW/teddinenew.png" alt="Teddiursa Icon" className="inline mx-1 w-[90px] h-[90px]" /> liquid to continue receiving rewards.</li>
+                <li>Unique Character Representation: <img src="https://i.ibb.co/nfYN0YW/teddinenew.png" alt="Teddiursa Icon" className="inline mx-1 w-[60px] h-[60px]" /> brings its cute and lovable personality to the Pokechain ecosystem, adding diversity to the <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[60px]" />inspired tokens.</li>
+                <li>Community Engagement: As a free airdrop to the Pokechain community, <img src="https://i.ibb.co/nfYN0YW/teddinenew.png" alt="Teddiursa Icon" className="inline mx-1 w-[60px] h-[60px]" /> encourages wider participation and helps grow the overall Pokechain movement.</li>
+                <li>Reward Mechanism: With its 3% rewards in Teddy tokens, <img src="https://i.ibb.co/nfYN0YW/teddinenew.png" alt="Teddiursa Icon" className="inline mx-1 w-[60px] h-[60px]" /> introduces an innovative tokenomics model to the Pokechain trend, potentially inspiring other projects.</li>
+                <li>Cross-Token Interactions: The connection between <img src="https://i.ibb.co/nfYN0YW/teddinenew.png" alt="Teddiursa Icon" className="inline mx-1 w-[60px] h-[60px]" /> and Teddy tokens showcases the potential for interesting token interactions within the Pokechain ecosystem.</li>
+                <li>Community-Driven Liquidity: For the token to thrive and grow, the community will need to add their own liquidity to the trading pools. This active participation ensures a healthy and sustainable ecosystem for <img src="https://i.ibb.co/nfYN0YW/teddinenew.png" alt="Teddiursa Icon" className="inline mx-1 w-[60px] h-[60px]" />. Users should also keep a healthy bag of <img src="https://i.ibb.co/nfYN0YW/teddinenew.png" alt="Teddiursa Icon" className="inline mx-1 w-[60px] h-[60px]" /> liquid to continue receiving rewards.</li>
               </ul>
             </div>
           </motion.div>
@@ -263,27 +299,27 @@ function App() {
                 <div className="flex-1">
                   <p className="mb-4">
                     The Pokedex is an essential tool for every 
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[36px]" /> 
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[60px]" /> 
                     trainer. In the world of Pokechain, our Pokedex represents the collection of all 
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[36px]" /> 
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[60px]" /> 
                     -inspired tokens on the 
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pulsechain-card.ead95153-tOblpYBeTyIO8ypzGjd1qe2s6T32rJ.png" alt="PulseChain Logo" className="inline mx-1 w-[120px] h-[30px]" /> 
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pulsechain-card.ead95153-tOblpYBeTyIO8ypzGjd1qe2s6T32rJ.png" alt="PulseChain Logo" className="inline mx-1 w-[120px] h-[60px]" /> 
                     network.
                   </p>
                   <p className="mb-4">
                     Just like in the 
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[36px]" /> 
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[60px]" /> 
                     world, our goal is to "catch 'em all" - collect and trade various 
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[36px]" /> 
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[60px]" /> 
                     tokens to complete your digital Pokedex. Each token represents a unique 
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[36px]" />, 
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[60px]" />, 
                     with its own traits, abilities, and potential for growth.
                   </p>
                   <p>
                     Can you catch them all? Start your journey with 
-                    <img src="https://i.ibb.co/nfYN0YW/teddinenew.png" alt="Teddiursa Icon" className="inline mx-1 w-[90px] h-[90px]" /> 
+                    <img src="https://i.ibb.co/nfYN0YW/teddinenew.png" alt="Teddiursa Icon" className="inline mx-1 w-[60px] h-[60px]" /> 
                     and see how many 
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[36px]" /> 
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20(1)-ZMiiH2b3i6xS9jPr1wDUz4vFGiFXAB.png" alt="Pokemon Logo" className="inline mx-1 w-[90px] h-[60px]" /> 
                     tokens you can collect!
                   </p>
                 </div>
@@ -323,7 +359,7 @@ function App() {
               <form onSubmit={handleWalletSubmit} className="mb-4">
                 <input
                   type="text"
-                  placeholder="Enter your wallet address"
+                  placeholder="Not Yet Live... Stay Tuned"
                   value={walletAddress}
                   onChange={(e) => setWalletAddress(e.target.value)}
                   className="w-full p-2 rounded text-black"
@@ -332,7 +368,7 @@ function App() {
               </form>
               {teddiBalance > 0 && (
                 <div>
-                  <p className="text-xl">Your <img src="https://i.ibb.co/nfYN0YW/teddinenew.png" alt="Teddiursa Icon" className="inline mx-1 w-[90px] h-[90px]" /> Balance: {teddiBalance.toLocaleString()}</p>
+                  <p className="text-xl">Your <img src="https://i.ibb.co/nfYN0YW/teddinenew.png" alt="Teddiursa Icon" className="inline mx-1 w-[60px] h-[60px]" /> Balance: {teddiBalance.toLocaleString()}</p>
                   <p className="text-xl">Your <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TEDDYBEAR-COINMARKETCAP-LOGO-200X200-QrlRkSKSr3J9R9pq35ZxDEyE6LHS07.webp" alt="Teddy Icon" className="inline mx-1 w-[20px] h-[20px]" /> Rewards: {teddyRewards.toLocaleString()}</p>
                 </div>
               )}
@@ -348,8 +384,8 @@ function App() {
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
             <div className={`${darkMode ? 'bg-black' : 'bg-white'} p-6 rounded-lg`}>
-              <h2 className="text-3xl font-bold mb-4">Join Our Honey-Loving Community</h2>
-              <p className="mb-4">Be part of the <img src="https://i.ibb.co/nfYN0YW/teddinenew.png" alt="Teddiursa Icon" className="inline mx-1 w-[90px] h-[90px]" /> family! Connect with us on social media and join our Telegram groups for the latest updates, memes, and honey-sweet discussions.</p>
+              <h2 className="text-3xl font-bold mb-4">Join the Pokechain Community</h2>
+              <p className="mb-4">Be part of the <img src="https://i.ibb.co/nfYN0YW/teddinenew.png" alt="Teddiursa Icon" className="inline mx-1 w-[60px] h-[60px]" /> family! Connect with us on social media and join our Telegram groups for the latest updates, memes, and honey-sweet discussions.</p>
               <div className="mt-4 flex space-x-4">
                 <a href="https://t.me/PokechainTeddi" className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">Teddiursa Telegram</a>
                 <a href="https://t.me/Real_Pokecenter" className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">Pokecenter Telegram</a>
